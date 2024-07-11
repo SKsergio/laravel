@@ -110,3 +110,9 @@
 .clean:hover{
     box-shadow: rgba(39, 128, 245, 0.384) 12px 14px 20px;;
 }
+.edit_form{
+    background-image: url(../img/malte-schmidt-enGr5YbjQKQ-unsplash.jpg);
+}
+.edit_form .input_box span{
+    color: white;
+}

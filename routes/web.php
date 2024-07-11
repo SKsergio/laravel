@@ -34,4 +34,8 @@ Route::controller(CursosController::class)->group(function(){
 Route::post('cursos', [CursosController::class, 'store'])->name('cursos.store');
 
 ####################### RUTA PARA ACCEDER A FORMULARIO DE ACTUALIZACION ###############################
-Route::get('curso/{curso}/edit', [CursosController::class, 'edit'])->name('cursos.edit');
+Route::get('curso/{curso}/edit', [CursosController::class, 'edit'])->name('cursos.edit'); //el metedo edit nos sirve para llamar al formulario de actualizacion
+
+
+####################### RUTA PARA ACTUALIZAR EL REGISTRO ###############################
+Route::put('cursos/{curso}', [CursosController::class, 'update'])->name('cursos.update'); //el metodo update comunmente se utiliza para actualizar los registros de la base
