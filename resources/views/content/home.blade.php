@@ -11,10 +11,10 @@
     <div class="container">
 
         <div class="welcome">
-            <h1>Bienvenida</h1>
+            <h1 class="my-9 text-4xl">Bienvenida</h1>
 
             <section class="info__cursos">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae assumenda dolore
+                <p class="mb-9">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae assumenda dolore
                     quibusdam error tempore laudantium perspiciatis illum sapiente consequatur nam facilis,
                     pariatur animi voluptatibus beatae quod magni ratione debitis.</p>
                     

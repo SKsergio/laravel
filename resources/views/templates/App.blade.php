@@ -8,7 +8,7 @@
     {{-- general css --}}
     <link rel="stylesheet" href="{{asset('css/normalice.css')}}">
     <link rel="stylesheet" href="{{asset('css/layaout.css')}}">
-
+    <link rel="stylesheet" href="{{asset('css/menu.css')}}">
     {{-- especific css --}}
     @stack('css')
 
@@ -16,6 +16,7 @@
 <body>
     <header>
         {{-- menu component --}}
+        <x-menu></x-menu>
     </header>
 
     <main>
@@ -27,7 +28,8 @@
 
     </footer>
 
-    {{-- especific js --}}
+    {{-- especific js --}} 
     @stack('js')
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

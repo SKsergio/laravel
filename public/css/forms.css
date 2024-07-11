@@ -1,0 +1,112 @@
+@import url(variables.css);
+
+.form_reg{
+    height: 500px;
+    background-image: url(../img/max-bender-VmX3vmBecFE-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.form_course_register{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    height: 90%;
+    margin: 0 auto;
+    border: 3px solid var(--color-white);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    padding: 10px;
+}
+/* contenedores */
+.container_inputs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px;
+    color: black;
+}
+
+.input_box{
+    margin-top: 30px;  /*ojo aca*/
+    position: relative;
+    max-height: 55px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 10px 0 0;
+}
+.input_box .input_file{
+    position: relative;
+    width: 100%;
+    padding: 15px 20px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    transition: 0.5s;
+    z-index: 10;
+}
+.input_box span{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    color: black;
+    font-size: 18px;
+    transition: .5s;
+}
+.input_box .input_file:valid~span,
+.input_box .input_file:focus~span{
+    color: rgb(248, 248, 248);
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+.input_box i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #f7f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .6s;
+    pointer-events: none;
+}
+.input_box .input_file:valid~i,
+.input_box .input_file:focus~i{
+    height: 40px;
+}
+.container_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.btn{
+    width:150px;
+    height: 39px;
+    background: var(--color-table1);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow: rgba(39, 245, 176, 0.384) 12px 14px 20px;;
+}
+.clean{
+    background: rgba(57, 114, 180, 0.904);
+}
+.clean:hover{
+    box-shadow: rgba(39, 128, 245, 0.384) 12px 14px 20px;;
+}

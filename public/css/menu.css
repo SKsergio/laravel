@@ -1,0 +1,6 @@
+.overlay{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgba(36, 68, 104, 0.884);
+}
