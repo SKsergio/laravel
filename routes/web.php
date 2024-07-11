@@ -1,8 +1,13 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+
+// send emails
+use App\Mail\ContactanosMailAble;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +47,18 @@ Route::put('cursos/{curso}', [CursosController::class, 'update'])->name('cursos.
 
 ####################### RUTA PARA ELIMINAR REGISTROS ##################################
 Route::delete('cursos/{curso}', [CursosController::class, 'destroy'])->name('cursos.destroy');
+
+
+############# RUTA PARA ENVIAR CORREOS #########################
+// Route::get('contactanos', function(){
+//     $correo = new ContactanosMailAble;
+//     Mail::to('correo899@gmail.com')->send($correo);
+
+//     return 'correo enviado';
+// })->name('contactanos.index');
+
+############# RUTA PARA ACCEDER AL FORMULARIO DE CONTACTO #########################
+Route::get('contactanos', [ContactController::class, 'index'])->name('contactanos.index');
+
+############# RUTA PARA PROCESAR AL FORMULARIO DE CONTACTO #########################
+Route::post('contactanos', [ContactController::class, 'store'])->name('contactanos.store');
