@@ -20,7 +20,7 @@ class CursosController extends Controller
     }
     //registrar
     public function store(Request $request){
-        //return $request->all();
+        //return $request->all(); //this method gets all fields of the form
         //before create instance and save the records we make sure that all inputs are complete
         $request->validate([
             'course_name' => 'required',
@@ -36,6 +36,13 @@ class CursosController extends Controller
         $curso->categoria = $request->category;
 
         $curso->save(); //para que se guarden los cambios
+
+        ############ ASIGNACION MASIVA ###############
+        //to be able to use mass assignment it's neccessary follow the naming conventions
+        //$curso = Curso::create($request->all()); //we can use this method only to add masive records to db 
+
+
+
         return redirect()->route('cursos'); //de esta manera podemos retornar al la pagina que queramos desde el conttrolador
     }
 
