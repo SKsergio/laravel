@@ -27,4 +27,10 @@ class Curso extends Model
             }
         );
     }
+
+    // Friendly Route
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

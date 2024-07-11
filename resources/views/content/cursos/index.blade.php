@@ -37,16 +37,17 @@
                                 <td>{{$item->created_at}}</td>
                                 <td>{{$item->updated_at}}</td>
                                 <td class="btn_list_conatiner"> 
-                                    <a href="{{route('cursos.show', $item->id)}}">
+                                    <a href="{{route('cursos.show', $item)}}">
                                         <button class="link_btn show">visualizar</button>
                                     </a>
                                     <a href="{{route('cursos.edit', $item)}}">
                                         <button class="link_btn update">Editar</button>
                                     </a>
-                                    <a href="{{route('cursos')}}">
-                                        <button class="link_btn delete">Eliminar</button>
-                                    </a>
-
+                                    <form action="{{route('cursos.destroy', $item)}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="link_btn delete">Eliminar</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

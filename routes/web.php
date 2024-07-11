@@ -39,3 +39,6 @@ Route::get('curso/{curso}/edit', [CursosController::class, 'edit'])->name('curso
 
 ####################### RUTA PARA ACTUALIZAR EL REGISTRO ###############################
 Route::put('cursos/{curso}', [CursosController::class, 'update'])->name('cursos.update'); //el metodo update comunmente se utiliza para actualizar los registros de la base
+
+####################### RUTA PARA ELIMINAR REGISTROS ##################################
+Route::delete('cursos/{curso}', [CursosController::class, 'destroy'])->name('cursos.destroy');

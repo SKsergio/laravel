@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Curso;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CursosController extends Controller
 {
@@ -22,6 +23,7 @@ class CursosController extends Controller
     public function store(Request $request){
         //return $request->all(); //this method gets all fields of the form
         //before create instance and save the records we make sure that all inputs are complete
+
         $request->validate([
             'course_name' => 'required',
             'description' => 'required',   ####this validation isn't bad, but prefer to do it with js :)
@@ -30,9 +32,11 @@ class CursosController extends Controller
 
         $curso = new Curso();
         // $curso->name = $request->course_name;
+        $course_name = filter_var($request->course_name, FILTER_SANITIZE_STRING); //ITS DEPRECATED
         
-        $curso->name = filter_var($request->course_name, FILTER_SANITIZE_STRING); //ITS DEPRECATED
-        $curso->description = $request->description;
+        $curso->name = $course_name;
+        $curso->slug = $name_slug = Str::slug($course_name,'-'); //add the slug, we have a problem, an the problem is if there are two courses whith the samne name, laravel shows only one record to the two records
+        $curso->description = $request->description;             //I think the quick solution is to validate the bd so that no two records exist with the same name.
         $curso->categoria = $request->category;
 
         $curso->save(); //para que se guarden los cambios
@@ -60,5 +64,10 @@ class CursosController extends Controller
 
         $curso->save();
         return redirect()->route('cursos.show', $curso);
+    }
+
+    public function destroy(Curso $curso){
+        $curso->delete();
+        return redirect()->route('cursos');
     }
 }
