@@ -1,0 +1,24 @@
+@import url('variables.css');
+
+body{
+    display: grid;
+    grid-template-areas: "header header header"
+    "container container container"
+    "footer footer footer";
+    background: var(--background-2color);
+}
+body header{
+    grid-area: header;
+}
+body main{
+    grid-area: container;
+}
+body footer{
+    grid-area: footer;
+}
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    color: var(--color-white);
+}

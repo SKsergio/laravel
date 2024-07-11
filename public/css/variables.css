@@ -1,0 +1,13 @@
+:root{
+    /* colores originales */ 
+    --color-primary:#23818da9 14%;
+    --color-secundary:#175fb2d2;
+    --color-third: #32404d;
+    --color-third-hover:#2e465c;
+    --color-cero: #1fafda;
+    --color-green:#1b252ec5;
+    --color-white: #ecf0f3;
+
+    --background-color: #111010;
+    --background-2color:rgb(22, 37, 41)0;
+}

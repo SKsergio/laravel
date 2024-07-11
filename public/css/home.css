@@ -1,0 +1,26 @@
+@import url('variables.css');
+
+.welcome{
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.info__cursos{
+    margin-left: 30px;
+}
+.btn_cursos{
+    width: 10%;
+    min-width: 60px;
+    height: 40px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 10px;
+    transition: all .6s ease;
+    cursor: pointer;
+}
+.btn_cursos:hover{
+    transform:  scale(1.1);
+    box-shadow: rgba(39, 166, 245, 0.384) 12px 14px 20px;
+}

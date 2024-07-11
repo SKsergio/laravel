@@ -1,0 +1,24 @@
+@import url('variables.css');
+.sections{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+.link_btn{
+    width: 8%;
+    min-width: 60px;
+    height: 37px;
+    color: var(--color-white);
+    background: var(--color-third);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.link_btn:hover{
+    background: var(--color-third-hover);
+    transform:  scale(1.1);
+}
